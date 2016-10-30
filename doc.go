@@ -1,8 +1,7 @@
 /*
-Package bufp provides a faster way to print values to
-[`io.Writer`](https://golang.org/pkg/io/#Writer).
-(about 5.x ~ 9.x faster compared to `fmt.Printf`)
-This package is inspired by [Using Go for competitive programming](http://byrd.im/competitive-go/).
+Package bufp provides a faster way to print values to io.Writer.
+(about 5.x ~ 9.x faster compared to fmt.Printf)
+This package is inspired by http://byrd.im/competitive-go/.
 
     bwriter := bufp.NewStdWriter()
     // stdout must be flushed manually.
