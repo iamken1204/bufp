@@ -1,7 +1,7 @@
 # bufp
 
 Package `bufp` provides a faster way to print strings to Stdout.   
-(about 5.x ~ 9.x compared to `fmt.Printf`)   
+(about 5.x ~ 9.x faster compared to `fmt.Printf`)   
 This package is inspired by [Using Go for competitive programming](http://byrd.im/competitive-go/).
 
 ```go
