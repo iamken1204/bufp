@@ -7,10 +7,20 @@ import (
 	"os"
 )
 
-// NewStdWriter returns *bufio.Writer
-// constructed by os.Stdout.
-func NewStdWriter() *bufio.Writer {
-	return bufio.NewWriter(os.Stdout)
+// BWriter contains bufio.Writer
+type BWriter struct {
+	W *bufio.Writer
+}
+
+// Brintf prints out arguments to assigned writer.
+func (bw *BWriter) Brintf(format string, args ...interface{}) {
+	Printf(bw.W, format, args...)
+}
+
+// NewStdBWriter returns a BWriter with StdWriter
+func NewStdBWriter() *BWriter {
+	w := bufio.NewWriter(os.Stdout)
+	return &BWriter{w}
 }
 
 // NewWriter returns *bufio.Writer
