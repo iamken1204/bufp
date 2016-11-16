@@ -1,4 +1,5 @@
 # bufp
+[![Go Report Card](https://goreportcard.com/badge/github.com/iamken1204/bufp)](https://goreportcard.com/report/github.com/iamken1204/bufp)   
 
 Package `bufp` provides a faster way to print values to [`io.Writer`](https://golang.org/pkg/io/#Writer).   
 (about 5.x ~ 9.x faster compared to `fmt.Printf`)   
