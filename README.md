@@ -7,8 +7,15 @@ Package `bufp` provides a faster way to print values to [`io.Writer`](https://go
 This package is inspired by [Using Go for competitive programming](http://byrd.im/competitive-go/).
 
 ```go
-bwriter := bufp.NewStdWriter()
+bw := bufp.NewStdBWriter()
 // stdout must be flushed manually.
-defer bwriter.Flush()
-bufp.Printf(bwriter, "%d%s%f", []interface{}{123, "hello", 98.76})
+defer bw.W.Flush()
+bw.Brintf("%v %v %v\n", 123, "gop", 99.999)
+```
+_or_
+```go
+bw := bufp.NewWriter(bufio.NewWriter(os.Stdout))
+// stdout must be flushed manually.
+defer bw.Flush()
+bufp.Printf(bw, "%v %v %v\n", 123, "gop", 99.999)
 ```
